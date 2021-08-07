@@ -160,8 +160,8 @@ class _HomeState extends State<Home> {
     //
     for(String matchName in Variable_VirtualSize_MatchNameList){
       if(matchName != null){
-        // final bicepsSnapshot = await Product_VirtualSize_Matches.doc("Tshirt").collection(CollectionName).doc(matchName).get();
-        // await bicepsSnapshot.reference.update({VirtualSize_IntervalName: FieldValue.arrayUnion([tshirtID])});
+        final bicepsSnapshot = await Product_VirtualSize_Matches.doc("Tshirt").collection(CollectionName).doc(matchName).get();
+        await bicepsSnapshot.reference.update({VirtualSize_IntervalName: FieldValue.arrayUnion([tshirtID])});
       }
       else{
         print("----------------------------------------------------------  " + tshirtID +  " " + CollectionName + " NULL!");
